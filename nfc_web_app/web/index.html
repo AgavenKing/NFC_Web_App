@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FBF6F0">
+  <title>KaffeeApp</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="img/icon-192.png">
+  <link rel="apple-touch-icon" href="img/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="screen">
+    <header class="header">
+      <span class="rule"></span>
+      <svg class="cup" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 9h12v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9Z"/>
+        <path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16"/>
+        <path d="M8 2.5c-.8 1-.8 1.8 0 2.8s.8 1.8 0 2.8"/>
+        <path d="M12 2.5c-.8 1-.8 1.8 0 2.8s.8 1.8 0 2.8"/>
+      </svg>
+      <span class="rule"></span>
+    </header>
+
+    <h1 class="title">Bitte wählen Sie<br>Ihre Kaffeeart</h1>
+
+    <div class="grid" id="grid" role="radiogroup" aria-label="Kaffeeart"></div>
+
+    <p class="hint" id="hint" hidden></p>
+  </main>
+
+  <div class="footer">
+    <button class="prepare" id="prepare" type="button">Zubereiten</button>
+  </div>
+
+  <div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+    <div class="sheet-card">
+      <div class="pulse" id="pulse">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="currentColor" stroke="none"/>
+          <path d="M9.2 15.2a4 4 0 0 1 5.6 0"/>
+          <path d="M6.4 12.4a8 8 0 0 1 11.2 0"/>
+          <path d="M3.6 9.6a12 12 0 0 1 16.8 0"/>
+        </svg>
+      </div>
+      <h2 class="sheet-title" id="sheet-title">Bereit zum Schreiben</h2>
+      <p class="sheet-text" id="sheet-text">Halten Sie Ihr Smartphone an den NFC-Tag.</p>
+      <button class="sheet-close" id="sheet-close" type="button">Abbrechen</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
